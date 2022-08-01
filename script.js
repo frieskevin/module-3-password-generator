@@ -1,5 +1,4 @@
-
-
+// declaring variables used throughout
 var generateBtn = document.querySelector("#generate");
 var passLength = '';
 var passCharacters = '';
@@ -12,8 +11,7 @@ const passCriteria = {
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   numeric: '0123456789',
   special: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
-} 
-
+};
 
 // variable and prompt asking for password length
 var passwordLengthFunc = function () {
@@ -23,9 +21,7 @@ var passwordLengthFunc = function () {
     passwordLengthFunc();
     console.log(passLength)
   }
-
 };
-
 
 // prompts defining criteria of password
 var passCriteriaFunc = function () {
@@ -56,6 +52,7 @@ var passCriteriaFunc = function () {
   console.log(passCriteria);
   console.log(passCharacters);
 };
+
 // for loop calculating random password from criteria
 function passwordGenerator(length) {
   var result = ' ';
@@ -66,17 +63,16 @@ function passwordGenerator(length) {
   return result;
 }
 
+// function running the other functions and printing the password generated onto the html page
 function writePassword() {
+  passLength = '';
+  passCharacters = '';
   passwordLengthFunc();
   passCriteriaFunc();
   var password = passwordGenerator(passLength);
   var passwordText = document.querySelector("#password");
- 
-
   passwordText.value = password;
-
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
