@@ -1,6 +1,6 @@
-### Module 3 Password Generator
+# Module 3 Password Generator
 
-# Generates a unique password with provided length and criteria into the box to copy and use.
+### Generates a unique password with provided length and criteria into the box to copy and use.
 
 [Link to Deployment](https://frieskevin.github.io/module-3-password-generator/)
 
